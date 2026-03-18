@@ -1,0 +1,54 @@
+============================================================
+                  COMANDOS DE GITHUB
+============================================================
+
+1. Configuración inicial
+   git config --global user.name "nombre de ususario" #agregar el nombre del usuario
+   git config --global user.email "correo electronico del usuario" #agregar el correo electronico del usuario
+   git config --global core.editor "code --wait"   #para usar visual studio
+
+2. Inicializacion de un repositorio
+   git init                  #crea un nuevo repositorio local
+
+3. Clonacion de un repositorio remoto
+   git clone "url del proyecto "   #para clonar un repositorio
+
+4. Ver estado actual
+   git status                #para ver las modificaciones de los archivos
+
+5. Agregar archivos al repositorio
+   git add "nombre y extencion del archivo"   #agrega un archivo especifico al repositorio
+   git add .                 # agrega todos los archivos sean modificados o nuevos
+
+6. Guardar cambios
+   git commit -m "mensaje o descripcion del cambio"   #guarda los cambios al repositorio
+
+7. Ver el historial de cambios
+   git log                   #muestra todos los cambios
+   git log --oneline         #muestra los cambios de manera recortada
+
+8. Trabajar con ramas
+   git branch                #nos da una lista con las ramas existentes en el repositorio
+   git branch nombre-rama    # crea una nueva rama
+   git checkout nombre-rama  #cambiar a otra rama
+   git switch nombre-rama    # mas moderno que checkout
+
+9. Fusionar ramas
+   git merge nombre-rama     #fusiona la rama indicada actual
+
+10. Enviar cambios al repositorio remoto
+    git push origin main      #sube los cambios en la rama main
+    git push -u origin main
+
+11. Traer cambios del repositorio remoto
+    git pull                  #trae y fusiona los cambios
+    git fetch                 # solo trae cambios sin fusionar
+
+12. Otros comandos (utiles x cierto)
+    git diff                  #muestra cambios que aun no se realiaron
+    git restore "nombre del archivo"   #deshace los cambios de un archivo
+    git rm "nombre del achivo"         #elimina el archivo del repositorio
+    git stash                 #es un cambio temporal sin hacer un commit
+    git stash pop             #recupera los cambios guardados
+
+============================================================
