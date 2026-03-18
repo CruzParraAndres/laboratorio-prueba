@@ -13,15 +13,21 @@ public class NumeroPrimo {
             }
         }
     }
-    public static boolean esPrimo(int n) {
-        if (n <= 1) return false; // Los números menores o iguales a 1 no son primos
-        if (n == 2) return true;  // El 2 es primo
-        if (n % 2 == 0) return false; // Los pares mayores a 2 no son primos
 
-        // Verificamos divisores desde 3 hasta la raíz cuadrada de n
-        for (int i = 3; i <= Math.sqrt(n); i += 2) {
-            if (n % i == 0) return false;
+    // Nuevo algoritmo: Verificación simple por divisores
+    public static boolean esPrimo(int n) {
+        // Números menores o iguales a 1 no son primos
+        if (n <= 1) {
+            return false;
         }
-        return true;
+
+        // Verificamos si es divisible por cualquier número desde 2 hasta n-1
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false;   // Encontramos un divisor → no es primo
+            }
+        }
+
+        return true;  // Si no encontró ningún divisor, es primo
     }
 }
